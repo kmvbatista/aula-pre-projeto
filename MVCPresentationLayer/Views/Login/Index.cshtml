@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/gag.css" rel="stylesheet" />
+</head>
+<body>
+    <section id="signup">
+        <div>
+            <h2>Login</h2>
+            <form id="login-email" action="/login" method="POST">
+                <input type="hidden" name="next" value="/">
+                <p class="lead">Digite suas credenciais </p>
+                <div class="field">
+                    <label for="login-email-name">Email</label>
+                    <input id="login-email-name" type="text" name="UserName" value="" autofocus="autofocus">
+                </div>
+                <div class="field">
+                    <label for="login-email-password">Password</label>
+                    <input id="login-email-password" type="password" name="Password" value=""> <!---->
+                </div>
+                <div class="btn-container">
+                    <input type="submit" value="Log in" class="btn left">
+                </div>
+                @if (ViewBag.Errors != null)
+                {
+                    <p style="color:red;">
+                        @ViewBag.Errors
+                    </p>
+                }
+            </form>
+        </div> <!----> <!---->
+    </section>
+
+</body>
+</html>

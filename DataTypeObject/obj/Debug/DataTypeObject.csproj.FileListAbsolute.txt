@@ -1,0 +1,6 @@
+C:\Users\moc\Source\Repos\HotelSolution\DataTypeObject\bin\Debug\DataTypeObject.dll
+C:\Users\moc\Source\Repos\HotelSolution\DataTypeObject\bin\Debug\DataTypeObject.pdb
+C:\Users\moc\Source\Repos\HotelSolution\DataTypeObject\obj\Debug\DataTypeObject.csprojAssemblyReference.cache
+C:\Users\moc\Source\Repos\HotelSolution\DataTypeObject\obj\Debug\DataTypeObject.csproj.CoreCompileInputs.cache
+C:\Users\moc\Source\Repos\HotelSolution\DataTypeObject\obj\Debug\DataTypeObject.dll
+C:\Users\moc\Source\Repos\HotelSolution\DataTypeObject\obj\Debug\DataTypeObject.pdb

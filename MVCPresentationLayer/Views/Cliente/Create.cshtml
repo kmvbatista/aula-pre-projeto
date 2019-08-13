@@ -1,0 +1,186 @@
+﻿@model MVCPresentationLayer.Models.ClienteViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>ClienteViewModel</h4>
+        <hr />
+
+        @if (ViewBag.Errors != null)
+        {
+            <p class="text-danger">
+                @ViewBag.Errors
+            </p>
+        }
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                <span id="ErroNome" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CPF, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CPF, new { htmlAttributes = new { @class = "form-control" } })
+                <span id="ErroCPF" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                <span id="ErroEmail" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DataNascimento, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DataNascimento, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Telefone, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { @class = "form-control" } })
+                <span id="ErroTelefone" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input onclick="return validarCliente()" type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+
+    <script type="text/javascript">
+
+        //evento jquery que é executado quando a página termina de carregar
+        $(document).ready(function () {
+            $("#CPF").mask("000.000.000-00");
+            $("#Telefone").mask("(99) 00000-00");
+        });
+
+        function validarCliente() {
+
+            //$("#nome") -> pega o input com o id nome
+            //$(".nome") -> pega o elemento html com a classe css .nome
+            //$("p") -> pega todos os paragrafos
+            //$("p.nome") -> pega todas os elementos com a classe css .nome que estejam
+            //dentro de um parágrafo
+            var sucesso = true;
+            var nome = $("#Nome").val();
+            var cpf = $("#CPF").val();
+            var email = $("#Email").val();
+            var telefone = $("#Telefone").val();
+
+            if (nome == "") {
+                sucesso = false;
+                $("#ErroNome").html("Favor, informe o nome.");
+            }
+            else {
+                $("#ErroNome").html("");
+            }
+            if (email == "") {
+                sucesso = false;
+                $("#ErroEmail").html("Favor, informe o email.");
+            }
+            else {
+                $("#ErroEmail").html("");
+            }
+            if (cpf == "") {
+                sucesso = false;
+                $("#ErroCPF").html("Favor, informe o cpf.");
+            }
+            else {
+                $("#ErroCPF").html("");
+            }
+            if (telefone == "") {
+                sucesso = false;
+                $("#ErroTelefone").html("Favor, informe o telefone.");
+            }
+            else {
+                $("#ErroTelefone").html("");
+            }
+            return sucesso;
+            //var sucesso = true;
+            //var nome = document.getElementById("Nome").value;
+            //var cpf = document.getElementById("CPF").value;
+            //var email = document.getElementById("Email").value;
+            //var telefone = document.getElementById("Telefone").value;
+
+            //if (nome == "") {
+            //    sucesso = false;
+            //    document.getElementById("ErroNome").innerHTML = "Informe o nome.";
+            //} else {
+            //    document.getElementById("ErroNome").innerHTML = "";
+            //}
+
+            //if (cpf == "") {
+            //    sucesso = false;
+            //    document.getElementById("ErroCPF").innerHTML = "Informe o cpf.";
+            //} else {
+            //    document.getElementById("ErroCPF").innerHTML = "";
+            //}
+
+
+            //if (telefone == "") {
+            //    sucesso = false;
+            //    document.getElementById("ErroTelefone").innerHTML = "Informe o telefone.";
+            //} else {
+            //    document.getElementById("ErroTelefone").innerHTML = "";
+            //}
+
+
+            //if (email == "") {
+            //    sucesso = false;
+            //    document.getElementById("ErroEmail").innerHTML = "Informe o email.";
+            //} else {
+            //    document.getElementById("ErroEmail").innerHTML = "";
+            //}
+
+            //return sucesso;
+        }
+
+
+    </script>
+
+
+}

@@ -1,0 +1,17 @@
+C:\Users\moc\Source\Repos\HotelSolution\BLL\bin\Debug\BLL.dll.config
+C:\Users\moc\Source\Repos\HotelSolution\BLL\bin\Debug\BLL.dll
+C:\Users\moc\Source\Repos\HotelSolution\BLL\bin\Debug\BLL.pdb
+C:\Users\moc\Source\Repos\HotelSolution\BLL\bin\Debug\DataAccessLayer.dll
+C:\Users\moc\Source\Repos\HotelSolution\BLL\bin\Debug\DataTypeObject.dll
+C:\Users\moc\Source\Repos\HotelSolution\BLL\bin\Debug\EntityFramework.dll
+C:\Users\moc\Source\Repos\HotelSolution\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\moc\Source\Repos\HotelSolution\BLL\bin\Debug\DataAccessLayer.pdb
+C:\Users\moc\Source\Repos\HotelSolution\BLL\bin\Debug\DataAccessLayer.dll.config
+C:\Users\moc\Source\Repos\HotelSolution\BLL\bin\Debug\DataTypeObject.pdb
+C:\Users\moc\Source\Repos\HotelSolution\BLL\bin\Debug\EntityFramework.xml
+C:\Users\moc\Source\Repos\HotelSolution\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\moc\Source\Repos\HotelSolution\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\moc\Source\Repos\HotelSolution\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\moc\Source\Repos\HotelSolution\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\moc\Source\Repos\HotelSolution\BLL\obj\Debug\BLL.dll
+C:\Users\moc\Source\Repos\HotelSolution\BLL\obj\Debug\BLL.pdb
